@@ -13,19 +13,19 @@ export default function Home  (){
       
       <section className="home-cards">
         <div className="card">
-          <h3>Card 1</h3>
+          <h3>Ver notas</h3>
           <p>Details about card 1.</p>
         </div>
         <div className="card">
-          <h3>Card 2</h3>
+          <h3>Ver Frequencia</h3>
           <p>Details about card 2.</p>
         </div>
         <div className="card">
-          <h3>Card 3</h3>
+          <h3>Imprimir notas</h3>
           <p>Details about card 3.</p>
         </div>
         <div className="card">
-          <h3>Card 4</h3>
+          <h3>Informar Erro</h3>
           <p>Details about card 4.</p>
         </div>
       </section>
