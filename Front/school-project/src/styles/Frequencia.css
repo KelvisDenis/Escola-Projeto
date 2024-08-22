@@ -1,0 +1,43 @@
+.frequencia-container {
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .frequencia-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .frequencia-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .frequencia-table th, .frequencia-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .frequencia-table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .frequencia-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .frequencia-table tr:hover {
+    background-color: #ddd;
+  }
+  

@@ -1,5 +1,5 @@
 // src/components/Login.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Login.css'; // Importa o arquivo CSS
 
@@ -25,21 +25,7 @@ export default function  Login () {
     }
 
   };
-  useEffect(() => {
-    const authTokenTimestamp = localStorage.getItem('authTokenTimestamp');
-    if (authTokenTimestamp) {
-      const expiryTime = 1 * 60 * 1000; // 1 minuto em milissegundos
-      const currentTime = Date.now();
 
-      if (currentTime - authTokenTimestamp > expiryTime) {
-        // O tempo já passou, então remova o token
-        localStorage.removeItem('authToken');
-        localStorage.removeItem('authTokenTimestamp');
-        alert('Sua sessão expirou.');
-        nav('/'); // Redireciona para a página de login
-      }
-    }
-  }, [nav]);
 
   return (
     <div className="login-container">

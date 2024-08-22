@@ -3,6 +3,7 @@
 .home-container {
     padding: 20px;
     text-align: center;
+    margin-top: 50px;
   }
   
   .home-header {
@@ -48,4 +49,13 @@
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+  .home-link {
+    color: rgb(45, 63, 101);
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px;
+    transition: color 0.3s;
+  }
+  
   
