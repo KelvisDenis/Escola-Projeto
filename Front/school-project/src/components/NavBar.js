@@ -33,7 +33,7 @@ export default function NavBar (){
           <>
           <Link to="/home" className="navbar-logo">school</Link>
           <ul className="navbar-menu">
-          <li className="navbar-item"><Link to="/home" className="navbar-link">Home</Link></li>
+          <li className="navbar-item"><Link to="/home" className="navbar-link">Inicio</Link></li>
         </ul>
         </>
         ) : (
