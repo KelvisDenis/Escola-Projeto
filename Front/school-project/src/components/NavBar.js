@@ -9,9 +9,9 @@ export default function NavBar (){
   const nav = useNavigate();
 
   useEffect(() => {
-    console.log(localStorage.getItem('authToken'))
+    console.log("Matricula: "+ localStorage.getItem('matricula'))
+    console.log("Token: "+ localStorage.getItem('authToken'))
     const authTokenTimestamp = localStorage.getItem('authTokenTimestamp');
-    console.log(authTokenTimestamp);
     if (authTokenTimestamp) {
       const expiryTime = 1 * 60 * 10000; // 1 minuto em milissegundos
       const currentTime = Date.now();

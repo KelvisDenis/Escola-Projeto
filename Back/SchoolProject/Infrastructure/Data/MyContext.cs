@@ -14,6 +14,11 @@ namespace SchoolProject.Infrastructure.Data
 
 
         public DbSet<UserModel> UserDB { get; set; }
+        public DbSet<StudentModel> StudentDB { get; set; }
+        public DbSet<ClassRoomModel> ClassDB { get; set; }
+        public DbSet<NoteModel> NoteDB { get; set; }
+        public DbSet<MattersModel> MattersDB { get; set; }
+        public DbSet<StudentNoteJoin> StudentNoteJoinsDB { get; set; }
     }
 
 

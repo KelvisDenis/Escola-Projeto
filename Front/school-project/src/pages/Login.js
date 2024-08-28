@@ -17,10 +17,32 @@ export default function  Login () {
     } else {
       setError('');
       // Lógica para autenticar o usuário (substituir com a lógica real)
-      console.log('Logged in with:', matricula, password);
-      localStorage.setItem('authToken', matricula);
-      localStorage.setItem('authTokenTimestamp', Date.now());
-      nav('/home');
+      fetch("http://localhost:5164/api/UserApi/User/Login/", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          enrollment: matricula, 
+          password: password})
+      })
+      .then(res =>   {if(!res.ok) {
+        throw new Error('Failed to login'); // Captura erros como 400 ou 500
+      }
+      return res.json();
+    })
+      .then(data => {
+        localStorage.setItem('matricula', data.enrollment);
+        localStorage.setItem('authToken', data.token);
+        console.log('Success Logged:');
+        localStorage.setItem('authTokenTimestamp', Date.now());
+        nav('/home');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        nav("/")
+    });
+     
 
     }
 
@@ -34,7 +56,7 @@ export default function  Login () {
         <div className="login-input-group">
           <label htmlFor="email" className="login-label">Matricula</label>
           <input
-            type="email"
+            type="text"
             id="email"
             value={matricula}
             onChange={(e) => setMatricula(e.target.value)}
